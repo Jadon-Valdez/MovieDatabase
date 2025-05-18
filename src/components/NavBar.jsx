@@ -8,14 +8,14 @@ function NavBar() {
         <div>
             <img src={MovieLogo} alt="Movie database logo" />
         </div>
-        <div>
+        {/* <div>
             <div>
                 <a href='/'>Login</a>
             </div>
             <div>
                 <a href='/'>Sign Up</a>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }

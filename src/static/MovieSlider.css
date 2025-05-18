@@ -1,0 +1,125 @@
+.hero {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overlay {
+  background-color: rgba(2, 5, 46, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  height: 98%;
+  display: flex;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: auto;
+}
+
+.img-container img {
+  height: 90%;
+  width: auto;
+  border-radius: 10px;
+}
+
+.trailer-btn-container {
+  img {
+    width: 30px;
+    height: auto;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.title {
+  a, h2 {
+    margin: 0
+  }
+}
+
+.trailer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+  .overlay {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+  }
+  .hero {
+    height: 700px;
+  }
+  .img-container {
+    height: 30%;
+    padding-left: 30px;
+  }
+
+  .img-container img{
+      height: 90%;
+    }
+  }
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slick-active .img-container,
+.slick-active .text-container,
+.slick-active .title,
+.slick-active .trailer,
+.slick-active .overview {
+  animation: fadeSlideIn 0.8s ease-in-out both;
+}
+
+.slick-active .img-container {
+  animation-delay: 0.1s;
+}
+.slick-active .text-container {
+  animation-delay: 0.2s;
+}
+.slick-active .title {
+  animation-delay: 0.3s;
+}
+.slick-active .trailer {
+  animation-delay: 0.4s;
+}
+.slick-active .overview {
+  animation-delay: 0.5s;
+}
