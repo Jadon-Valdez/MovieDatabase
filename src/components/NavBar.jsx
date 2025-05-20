@@ -1,6 +1,6 @@
-import React from 'react'
-import '../static/NavBar.css'
-import MovieLogo from '../assets/DATABASE.png'
+import React from 'react';
+import '../static/NavBar.css';
+import MovieLogo from '../assets/DATABASE.png';
 
 function NavBar() {
   return (

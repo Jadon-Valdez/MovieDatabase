@@ -1,5 +1,5 @@
-import React from 'react'
-import '../static/Intro.css'
+import React from 'react';
+import '../static/Intro.css';
 
 function Intro() {
   return (

@@ -1,0 +1,87 @@
+.movie-genres-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.genre-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.genre-buttons button {
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.genre-buttons button:hover {
+  background-color: #444;
+}
+
+.genre-buttons button.active {
+  background-color: #007BFF;
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.movie-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.movie-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+.movie-title {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .genre-buttons button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .movie-overlay {
+    font-size: 13px;
+  }
+}

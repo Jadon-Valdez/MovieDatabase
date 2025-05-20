@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import PlayBtn from '../assets/playbtn.png';
+const token = import.meta.env.VITE_TMDB_TOKEN;
 
 function Modal({ show, onClose, videoKey }) {
   if (!show) return null;
@@ -63,14 +64,13 @@ function FeaturedList() {
           headers: {
             accept: 'application/json',
             Authorization:
-              'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YzY0NmZmMzcxOTJhZTQxMzBhY2FhZTE5MmYyOWM2MCIsIm5iZiI6MTc0NzM2MTI0Ni44NTYsInN1YiI6IjY4MjY5ZGRlNGY4Y2EyOTdkYzRiNTk2MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.l7UonY9jAiJ-A9oR8JF0s3Gqur0bhNAfVvBonAqoVuc',
+              `Bearer ${token}`,
           },
         };
 
         const res = await axios.request(options);
         const movieBriefList = res.data.results.slice(0, 6);
 
-        // Fetch details for each movie
         const detailRequests = movieBriefList.map((movie) =>
           axios.get(`https://api.themoviedb.org/3/movie/${movie.id}`, {
             params: { language: 'en-US' },
@@ -170,7 +170,6 @@ function FeaturedList() {
                   </div>
                 </div>
               </div>
-              <p>SEARCH WILL GO HERE</p>
             </div>
           ))}
         </Slider>
