@@ -58,12 +58,6 @@
   padding-left: 30px;
 }
 
-.title {
-  a, h2 {
-    margin: 0
-  }
-}
-
 .trailer {
   display: flex;
   align-items: center;
@@ -122,4 +116,8 @@
 }
 .slick-active .overview {
   animation-delay: 0.5s;
+}
+
+.movie-title {
+  display:contents !important;
 }

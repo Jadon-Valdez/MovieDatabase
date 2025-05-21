@@ -3,26 +3,26 @@ import axios from 'axios';
 import '../static/MovieGenres.css';
 const token = import.meta.env.VITE_TMDB_TOKEN;
 
-const genres = [
-  'Action', 'Comedy', 'Drama', 'Horror', 'Romance',
-  'Sci-Fi', 'Thriller', 'Fantasy', 'Documentary', 'Animation'
-];
+  const genres = [
+    'Action', 'Comedy', 'Drama', 'Horror', 'Romance',
+    'Sci-Fi', 'Thriller', 'Fantasy', 'Documentary', 'Animation'
+  ];
 
-const genreMap = {
-  Action: 28,
-  Comedy: 35,
-  Drama: 18,
-  Horror: 27,
-  Romance: 10749,
-  'Sci-Fi': 878,
-  Thriller: 53,
-  Fantasy: 14,
-  Documentary: 99,
-  Animation: 16
-};
+  const genreMap = {
+    Action: 28,
+    Comedy: 35,
+    Drama: 18,
+    Horror: 27,
+    Romance: 10749,
+    'Sci-Fi': 878,
+    Thriller: 53,
+    Fantasy: 14,
+    Documentary: 99,
+    Animation: 16
+  };
 
-const MovieGenres = () => {
-  const [selectedGenre, setSelectedGenre] = useState(null);
+  const MovieGenres = () => {
+  const [selectedGenre, setSelectedGenre] = useState(genres[0]);
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {

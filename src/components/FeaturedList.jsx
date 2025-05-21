@@ -139,7 +139,7 @@ function FeaturedList() {
                   </div>
                   <div className="text-container">
                     <div className="title">
-                      <h2 className="movie-title">{movie.title}</h2>
+                      <h2 className="movie-title">{movie.title || 'No Title Found'}</h2>
                       <p className="secondary-info">
                         {movie.release_date.slice(0, 4)} &#8226;{' '}
                         {movie.genres
